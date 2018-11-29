@@ -1,0 +1,177 @@
+===============================================================================
+Threads running
+================================= Thread Dump =================================
+
+-------------------------------------------------------------------------------
+ Thread Thread-6  (daemon: False, pydevd thread: True)
+
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydev_bundle/pydev_monkey.py", line 626, in __call__
+   ret = self.original_func(*self.args, **self.kwargs)
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 754, in run
+   self.__target(*self.__args, **self.__kwargs)
+ File "/home/fabioz/Desktop/python27_locks_all_threads_on_import/example_showing_halted_thread_on_debugger/main.py", line 31, in dump_threads_on_timeout
+   for i, (filename, lineno, name, line) in enumerate(traceback.extract_stack(stack)):
+
+-------------------------------------------------------------------------------
+ Thread pydevd.CheckAliveThread  (daemon: False, pydevd thread: True)
+
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydev_bundle/pydev_monkey.py", line 626, in __call__
+   ret = self.original_func(*self.args, **self.kwargs)
+   self: <CheckOutputThread(pydevd.CheckAliveThread, started 140074293380864)>
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 204, in run
+   self._on_run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 177, in _on_run
+   time.sleep(0.3)
+
+-------------------------------------------------------------------------------
+ Thread ptvsd.EventLoop  (daemon: True, pydevd thread: True)
+
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+   self: <Condition(<thread.lock object at 0x7f659d3b1290>, 1)>
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 754, in run
+   self.__target(*self.__args, **self.__kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/futures.py", line 106, in run_forever
+   if not self._event.wait(timeout=0.1):
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 614, in wait
+   self.__cond.wait(timeout)
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 359, in wait
+   _sleep(delay)
+
+-------------------------------------------------------------------------------
+ Thread pydevd.CommandThread  (daemon: True, pydevd thread: True)
+
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydev_bundle/pydev_monkey.py", line 626, in __call__
+   ret = self.original_func(*self.args, **self.kwargs)
+   self: <Condition(<thread.lock object at 0x7f65a3c0df90>, 1)>
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 204, in run
+   self._on_run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 155, in _on_run
+   self._py_db_command_thread_event.wait(0.3)
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 614, in wait
+   self.__cond.wait(timeout)
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 359, in wait
+   _sleep(delay)
+
+-------------------------------------------------------------------------------
+ Thread pydevd.Reader  (daemon: True, pydevd thread: True)
+
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+   self: <ptvsd.wrapper.PydevdSocket object at 0x7f659d3fec10>
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 204, in run
+   self._on_run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 274, in _on_run
+   r = self.sock.recv(1024)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 391, in recv
+   data = os.read(pipe_r, count)
+
+-------------------------------------------------------------------------------
+ Thread MainThread  (daemon: False, pydevd thread: False)
+
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd_launcher.py", line 38, in <module>
+   main(sys.argv)
+   self: <pydevd.PyDB object at 0x7f659d3fef50>
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/__main__.py", line 265, in main
+   wait=args.wait)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/__main__.py", line 258, in handle_args
+   debug_main(addr, name, kind, *extra, **kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_local.py", line 45, in debug_main
+   run_file(address, name, *extra, **kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_local.py", line 79, in run_file
+   run(argv, addr, **kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_local.py", line 140, in _run
+   _pydevd.main()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 1946, in main
+   globals = debugger.run(setup['file'], None, None, is_module)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 1306, in run
+   return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 1313, in _exec
+   pydev_imports.execfile(file, globals, locals)  # execute the script
+ File "/home/fabioz/Desktop/python27_locks_all_threads_on_import/example_showing_halted_thread_on_debugger/main.py", line 53, in <module>
+   import mod2  # Add breakpoint here, do a step in and wait for the thread dump in threads.log (right next to this file).
+ File "/home/fabioz/Desktop/python27_locks_all_threads_on_import/example_showing_halted_thread_on_debugger/mod2.py", line 1, in <module>
+   print('Actually finished importing mod2.py')
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 763, in trace_dispatch
+   self.do_wait_suspend(thread, frame, event, arg)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_frame.py", line 138, in do_wait_suspend
+   self._args[0].do_wait_suspend(*args, **kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 1028, in do_wait_suspend
+   self._do_wait_suspend(thread, frame, event, arg, suspend_type, from_this_thread)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/pydevd.py", line 1043, in _do_wait_suspend
+   time.sleep(0.01)
+
+-------------------------------------------------------------------------------
+ Thread pydevd.Writer  (daemon: True, pydevd thread: True)
+
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 204, in run
+   self._on_run()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 383, in _on_run
+   cmd.send(self.sock)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 560, in send
+   sock.sendall(as_bytes)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 434, in send
+   self._handle_msg(cmd_id, seq, args)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/daemon.py", line 531, in _handle_pydevd_message
+   self.session.handle_pydevd_message(cmdid, seq, text)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/session.py", line 181, in handle_pydevd_message
+   return self._msgprocessor.on_pydevd_event(cmdid, seq, text)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 1399, in on_pydevd_event
+   return f(self, seq, args)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 1348, in f
+   fut = m(self, self.loop, *args, **kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/futures.py", line 140, in g
+   it = f(self, *args, **kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 2479, in on_pydevd_thread_suspend
+   xml = self.parse_xml_response(args)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 1405, in parse_xml_response
+   return untangle.parse(io.BytesIO(args.encode('utf8'))).xml
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/untangle.py", line 183, in parse
+   parser = make_parser()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/xml/sax/__init__.py", line 81, in make_parser
+   return _create_parser(parser_name)
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/xml/sax/__init__.py", line 105, in _create_parser
+   drv_module = __import__(parser_name,{},{},['create_parser'])
+
+-------------------------------------------------------------------------------
+ Thread ptvsd.Client  (daemon: True, pydevd thread: True)
+
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 774, in __bootstrap
+   self.__bootstrap_inner()
+   self: <ptvsd.wrapper.VSCodeMessageProcessor object at 0x7f659d3e1650>
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+   self.run()
+ File "/home/fabioz/miniconda3/envs/py27/lib/python2.7/threading.py", line 754, in run
+   self.__target(*self.__args, **self.__kwargs)
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/wrapper.py", line 917, in process_messages
+   self.process_messages()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/ipcjson.py", line 305, in process_messages
+   self.process_one_message()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/ipcjson.py", line 318, in process_one_message
+   self._wait_for_message()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/ipcjson.py", line 172, in _wait_for_message
+   line = self._buffered_read_line_as_ascii()
+ File "/home/fabioz/.vscode/extensions/ms-python.python-2018.10.1/pythonFiles/experimental/ptvsd/ptvsd/ipcjson.py", line 131, in _buffered_read_line_as_ascii
+   temp = self.__socket.recv(1024)
+
+=============================== END Thread Dump ===============================

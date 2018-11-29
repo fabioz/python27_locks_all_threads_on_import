@@ -1,1 +1,1 @@
-# python27_locks_all_threads_on_import
+This project contains 2 folders, one showing an example on how Python 2.7 blocks all imports when the debugger is tracing an import and another showing how ptvsd becomes deadlocked because of that (see the related READMEs inside each folder).
